@@ -35,7 +35,7 @@ docker pull geographica/java_virtual_machine:server_jre_7u75_x64
 To start the container interactively:
 
 ```Shell
-docker run -ti --name whatever geographica/server_jre_7u75_x64 /bin/bash
+docker run -ti --name whatever geographica/java_virtual_machine:server_jre_7u75_x64 /bin/bash
 ```
 
 JMX

@@ -1,5 +1,5 @@
 # Version: 0.0.1
-FROM ubuntu:latest
+FROM debian:latest
 
 MAINTAINER Juan Pedro Perez "jp.alcantara@geographica.gs"
 
@@ -15,5 +15,4 @@ ENV LD_LIBRARY_PATH /usr/local/lib
 # Install the Server JRE
 WORKDIR /usr/local/
 ADD packages/server-jre-7u75-linux-x64.tar.gz /usr/local
-RUN chown -R root:root jdk1.7.0_75
 ADD packages/jmxremote.* $JAVA_HOME/
