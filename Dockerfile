@@ -13,4 +13,3 @@ ENV LD_LIBRARY_PATH /usr/local/lib
 # Install the Server JRE
 WORKDIR /usr/local/
 ADD packages/server-jre-7u75-linux-x64.tar.gz /usr/local
-ADD packages/jmxremote.* $JAVA_HOME/
