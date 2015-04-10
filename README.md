@@ -40,4 +40,4 @@ docker run -ti --name whatever geographica/java_virtual_machine:server_jre_7u75_
 
 JMX
 ---
-JMX access control are based on __packages/jmxremote.*__. Alter them before __docker build__ or enter into the container and change them manually to change permissions.
+JMX access control are based on __packages/jmxremote.*__. They are copied to __$JAVA_HOME__. Alter them before __docker build__ or enter into the container and change them manually to change permissions.
