@@ -1,7 +1,7 @@
 Docker Image for Oracle JVM 
 ===========================
 
-This is the README.md for Docker tag __server_jre_7u75_x64__. Please refer to the __Master__ README.md for updated information.
+This is the README.md for Docker tag __jdk_7u75_x64__. Please refer to the __Master__ README.md for updated information.
 
 What does this Docker image contains?
 -------------------------------------
@@ -9,9 +9,13 @@ An Oracle Java Virtual Machine Server JDK, installed not from packages, but from
 
 Tags
 ----
-Different versions may be available in the future. By now:
+Due to GitHub's limit to upload files of more than 100 MB, some files can't be added to the repository. They must be added manually to the __package__ folder to build some tags:
 
-- __server_jre_7u75_x64:__ Oracle Java Virtual Machine Server JRE 1.7.0-75.
+- __server_jre_7u75_x64:__ Oracle Java Virtual Machine Server JRE 1.7.0-75;
+
+- __jdk_7u75_x64:__ Oracle Java Virtual Machine JDK 1.7.0-75. The following files are needed to build:
+
+  - __jdk-7u75-linux-x64.tar.gz.__
 
 Guidelines for Creating New Docker Tags in this Repository
 ----------------------------------------------------------
@@ -32,17 +36,17 @@ Build the image directly:
 ```Shell
 git checkout tagbranch
 
-docker build -t="geographica/java_virtual_machine:server_jre_7u75_x64" .
+docker build -t="geographica/java_virtual_machine:jdk_7u75_x64" .
 ```
 
 or pull it from Docker Hub:
 
 ```Shell
-docker pull geographica/java_virtual_machine:server_jre_7u75_x64
+docker pull geographica/java_virtual_machine:jdk_7u75_x64
 ```
 
 To start the container interactively:
 
 ```Shell
-docker run -ti --name whatever geographica/java_virtual_machine:server_jre_7u75_x64 /bin/bash
+docker run -ti --name whatever geographica/java_virtual_machine:jdk_7u75_x64 /bin/bash
 ```
