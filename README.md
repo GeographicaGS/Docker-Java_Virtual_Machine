@@ -13,10 +13,6 @@ Due to GitHub's limit to upload files of more than 100 MB, some files can't be a
 
 - __server_jre_7u75_x64:__ Oracle Java Virtual Machine Server JRE 1.7.0-75;
 
-- __jdk_7u75_x64:__ Oracle Java Virtual Machine JDK 1.7.0-75. The following files are needed to build:
-
-  - __jdk-7u75-linux-x64.tar.gz.__
-
 Guidelines for Creating New Docker Tags in this Repository
 ----------------------------------------------------------
 Each Docker tag in this repository addresses changes in library versions bundled together. Follow this guidelines when creating new Docker tags for this repo:
@@ -36,17 +32,17 @@ Build the image directly:
 ```Shell
 git checkout tagbranch
 
-docker build -t="geographica/java_virtual_machine:jdk_7u75_x64" .
+docker build -t="geographica/java_virtual_machine:server_jre_7u75_x64" .
 ```
 
 or pull it from Docker Hub:
 
 ```Shell
-docker pull geographica/java_virtual_machine:jdk_7u75_x64
+docker pull geographica/java_virtual_machine:server_jre_7u75_x64
 ```
 
 To start the container interactively:
 
 ```Shell
-docker run -ti --name whatever geographica/java_virtual_machine:jdk_7u75_x64 /bin/bash
+docker run -ti --name whatever geographica/java_virtual_machine:server_jre_7u75_x64 /bin/bash
 ```
